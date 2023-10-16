@@ -29,5 +29,5 @@ else if (age < 30 && sex != "kobieta")
 }
 else
 {
-    Console.WriteLine("z poza badanej grupy");
+    Console.WriteLine("spoza badanej grupy");
 }
