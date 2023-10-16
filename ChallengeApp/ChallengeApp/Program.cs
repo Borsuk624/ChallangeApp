@@ -1,22 +1,8 @@
 ﻿string name = "Ewa";
-int age = 30;
-string sex = "kobieta";
+int age = 3;
+string sex = "kobiedta";
 
-// połączone
-
-if (name == "Ewa" && age == 30 && sex == "kobieta")
-{
-    Console.WriteLine("Ewa, 30 lat");
-}
-else if (age == 30 && sex == "kobieta")
-{
-    Console.WriteLine("kobieta, 30 lat");
-}
-else if (age < 30 && sex == "kobieta")
-{
-    Console.WriteLine("kobieta poniżej 30 lat");
-}
-else if (age < 30 && sex != "kobieta")
+if (sex != "kobieta")
 {
     if (age < 18)
     {
@@ -27,7 +13,26 @@ else if (age < 30 && sex != "kobieta")
         Console.WriteLine("pełnoletni mężczyzna");
     }
 }
-else
+else if (age > 30)
 {
-    Console.WriteLine("spoza badanej grupy");
+    Console.WriteLine("kobieta powyżej 30 lat");
+}
+else if (name == "Ewa" && age == 30)
+{
+    Console.WriteLine("Ewa, 30 lat");
+}
+else if (age == 30)
+{
+    Console.WriteLine("kobieta, 30 lat");
+}
+else if (age < 30)
+{
+    if (age < 18)
+    {
+        Console.WriteLine("niepełnoletnia kobieta");
+    }
+    else
+    {
+        Console.WriteLine("kobieta poniżej 30 lat");
+    }
 }
