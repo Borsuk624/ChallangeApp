@@ -25,7 +25,7 @@ else if (age == 30)
 {
     Console.WriteLine("kobieta, 30 lat");
 }
-else if (age < 30)
+else
 {
     if (age < 18)
     {
