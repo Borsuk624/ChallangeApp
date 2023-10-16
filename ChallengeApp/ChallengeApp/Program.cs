@@ -1,4 +1,4 @@
-﻿string name = "Eawa";
+﻿string name = "Ewa";
 int age = 30;
 string sex = "kobieta";
 
