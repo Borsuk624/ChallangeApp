@@ -1,6 +1,6 @@
 ﻿string name = "Ewa";
-int age = 3;
-string sex = "kobiedta";
+int age = 30;
+string sex = "kobieta";
 
 if (sex != "kobieta")
 {
