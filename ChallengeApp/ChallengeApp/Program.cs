@@ -1,4 +1,4 @@
-﻿string name = "Ewa";
+﻿string name = "Eawa";
 int age = 30;
 string sex = "kobieta";
 
@@ -8,7 +8,7 @@ if (name == "Ewa" && age == 30 && sex == "kobieta")
 {
     Console.WriteLine("Ewa, 30 lat");
 }
-else if (name != "Ewa" && age == 30 && sex == "kobieta")
+else if (age == 30 && sex == "kobieta")
 {
     Console.WriteLine("kobieta, 30 lat");
 }
@@ -18,7 +18,7 @@ else if (age < 30 && sex == "kobieta")
 }
 else if (age < 30 && sex != "kobieta")
 {
-    if (age < 18 && sex != "kobieta")
+    if (age < 18)
     {
         Console.WriteLine("niepełnoletni mężczyzna");
     }
