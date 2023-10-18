@@ -1,74 +1,42 @@
-﻿Console.WriteLine("zadanie domowe");
+﻿using System.Windows.Markup;
 
-var number = 6789;
-var numberAsString = number.ToString();
-char[] letters = numberAsString.ToArray();
+string pięść = "Kamień";
+string palce = "Nożyce";
+string dłoń = "Papier";
 
-var counter0 = 0;
-var counter1 = 0;
-var counter2 = 0;
-var counter3 = 0;
-var counter4 = 0;
-var counter5 = 0;
-var counter6 = 0;
-var counter7 = 0;
-var counter8 = 0;
-var counter9 = 0;
+var gracz1 = pięść;
+var gracz2 = pięść;
 
+Console.WriteLine(gracz1 + " vs " + gracz2);
 
-foreach (char letter in letters)
+if  (gracz1 == pięść && gracz2 == palce)
 {
-    if (letter == '0')
-    {
-        counter0++;
-    }
-    else if (letter == '1')
-    {
-        counter1++;
-    }
-    else if (letter == '2')
-    {
-        counter2++;
-    }
-    else if (letter == '3')
-    {
-        counter3++;
-    }
-    else if (letter == '4')
-    {
-        counter4++;
-    }
-    else if (letter == '5')
-    {
-        counter5++;
-    }
-    else if (letter == '6')
-    {
-        counter6++;
-    }
-    else if (letter == '7')
-    {
-        counter7++;
-    }
-    else if (letter == '8')
-    {
-        counter8++;
-    }
-    else
-    {
-        counter9++;
-    }
+    Console.WriteLine("Wygrywa gracza 1");
+}
+else if (gracz1 == pięść && gracz2 == dłoń)
+{
+    Console.WriteLine("Wygrywa gracza 2");
+}
+else if (gracz1 == palce && gracz2 == dłoń)
+{
+    Console.WriteLine("Wygrywa gracza 1");
+}
+else if (gracz1 == palce && gracz2 == pięść)
+{
+    Console.WriteLine("Wygrywa gracza 2");
+}
+else if (gracz1 == dłoń && gracz2 == palce)
+{
+    Console.WriteLine("Wygrywa gracza 2");
+}
+else if (gracz1 == dłoń && gracz2 == pięść)
+{
+    Console.WriteLine("Wygrywa gracza 1");
+}
+else
+{
+    Console.WriteLine("Remis");
 }
 
-Console.WriteLine("Liczba cyfr w " + number);
-Console.WriteLine("0 => " + counter0);
-Console.WriteLine("1 => " + counter1);
-Console.WriteLine("2 => " + counter2);
-Console.WriteLine("3 => " + counter3);
-Console.WriteLine("4 => " + counter4);
-Console.WriteLine("5 => " + counter5);
-Console.WriteLine("6 => " + counter6);
-Console.WriteLine("7 => " + counter7);
-Console.WriteLine("8 => " + counter8);
-Console.WriteLine("9 => " + counter9);
+
 
