@@ -1,74 +1,46 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using ChallengeApp;
 
-int number = 9159;
-string numberAsString = number.ToString();
-char[] digits = numberAsString.ToArray();
+Employee employee1 = new Employee("Adam ", "Tarko", 22);
+Employee employee2 = new Employee("Ada ", "Maze", 23);
+Employee employee3 = new Employee("Adaś ", "Logan", 24);
 
-int counter0 = 0;
-int counter1 = 0;
-int counter2 = 0;
-int counter3 = 0;
-int counter4 = 0;
-int counter5 = 0;
-int counter6 = 0;
-int counter7 = 0;
-int counter8 = 0;
-int counter9 = 0;
+employee1.AddScore(1);
+employee1.AddScore(2);
+employee1.AddScore(5);
+employee1.AddScore(2);
+employee1.AddScore(2);
 
+employee2.AddScore(5);
+employee2.AddScore(3);
+employee2.AddScore(5);
+employee2.AddScore(6);
+employee2.AddScore(7);
 
-foreach (char digit in digits)
+employee3.AddScore(8);
+employee3.AddScore(2);
+employee3.AddScore(5);
+employee3.AddScore(3);
+employee3.AddScore(9);
+
+int result1 = employee1.Result;
+int result2 = employee2.Result;
+int result3 = employee3.Result;
+
+List<Employee> Employees = new List<Employee>()
+        {
+        employee1, employee2, employee3
+        };
+
+int maxResult = -1;
+Employee employeeWithMaxResult = null;
+
+foreach (var employee in Employees)
 {
-    if (digit == '0')
+    if (employee.Result > maxResult)
     {
-        counter0++;
-    }
-    else if (digit == '1') 
-    {
-        counter1++;
-    }
-     else if (digit == '2') 
-    {
-        counter2++;
-    }
-     else if (digit == '3') 
-    {
-        counter3++;
-    }
-     else if (digit == '4') 
-    {
-        counter4++;
-    }
-     else if (digit == '5') 
-    {
-        counter5++;
-    }
-     else if (digit == '6') 
-    {
-        counter6++;
-    }
-     else if (digit == '7') 
-    {
-        counter7++;
-    }
-     else if (digit == '8') 
-    {
-        counter8++;
-    }
-    else
-    {
-        counter9++;
+        maxResult = employee.Result;
+        employeeWithMaxResult = employee;
     }
 }
 
-Console.WriteLine("liczba cyfr 0 w liczbie " + number + " to " + counter0);
-Console.WriteLine("liczba cyfr 1 w liczbie " + number + " to " + counter1);
-Console.WriteLine("liczba cyfr 2 w liczbie " + number + " to " + counter2);
-Console.WriteLine("liczba cyfr 3 w liczbie " + number + " to " + counter3);
-Console.WriteLine("liczba cyfr 4 w liczbie " + number + " to " + counter4);
-Console.WriteLine("liczba cyfr 5 w liczbie " + number + " to " + counter5);
-Console.WriteLine("liczba cyfr 6 w liczbie " + number + " to " + counter6);
-Console.WriteLine("liczba cyfr 7 w liczbie " + number + " to " + counter7);
-Console.WriteLine("liczba cyfr 8 w liczbie " + number + " to " + counter8);
-Console.WriteLine("liczba cyfr 9 w liczbie " + number + " to " + counter9);
-
-
+Console.WriteLine("Najwyższy wynik - " + employeeWithMaxResult.Result + " punktów - zdobył " + employeeWithMaxResult.Name + employeeWithMaxResult.Surname + " lat " + employeeWithMaxResult.Age);
