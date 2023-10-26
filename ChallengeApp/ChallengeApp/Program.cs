@@ -22,10 +22,6 @@ employee3.AddScore(5);
 employee3.AddScore(3);
 employee3.AddScore(9);
 
-int result1 = employee1.Result;
-int result2 = employee2.Result;
-int result3 = employee3.Result;
-
 List<Employee> Employees = new List<Employee>()
         {
         employee1, employee2, employee3
