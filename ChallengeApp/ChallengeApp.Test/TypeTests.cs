@@ -18,23 +18,23 @@
         public void CheckIfEmployeesNameAreTheSame()
         {
             //arrange
-            var employee1 = GetEmployee("Adam", "ddd", 22);
-            var employee2 = GetEmployee("Adam", "ddd", 22);
+            var employee1 = GetEmployee("Adam", "ddd");
+            var employee2 = GetEmployee("Adam", "ddd");
             // act
             //assert
             Assert.AreEqual(employee1.Name, employee2.Name);
         }
-        private Employee GetEmployee(string name, string surname, int age)
+        private Employee GetEmployee(string name, string surname)
         {
-            return new Employee(name, surname, age);
+            return new Employee(name, surname);
         }
 
         [Test]
         public void CheckIfEmployeesAreDiffrent()
         {
             //arrange
-            var employee3 = GetEmployee("Adam", "ddd", 22);
-            var employee4 = GetEmployee("Adam", "ddd", 22);
+            var employee3 = GetEmployee("Adam", "ddd");
+            var employee4 = GetEmployee("Adam", "ddd");
             // act
             //assert
             Assert.AreNotEqual(employee3, employee4);

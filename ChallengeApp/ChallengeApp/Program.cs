@@ -1,42 +1,17 @@
 ﻿using ChallengeApp;
 
-Employee employee1 = new Employee("Adam ", "Tarko", 22);
-Employee employee2 = new Employee("Ada ", "Maze", 23);
-Employee employee3 = new Employee("Adaś ", "Logan", 24);
+var employee = new Employee("Adam", "Maeve");
+employee.AddGrade(2);
+employee.AddGrade(2);
+employee.AddGrade(6);
+var statistics = employee.GetStatistics();
+Console.WriteLine($"Average: { statistics.Average:N2}");
+Console.WriteLine($"Min: {statistics.Min}");
+Console.WriteLine($"Max: {statistics.Max}");
 
-employee1.AddScore(1);
-employee1.AddScore(2);
-employee1.AddScore(5);
-employee1.AddScore(2);
-employee1.AddScore(2);
+SetSth(out statistics);
 
-employee2.AddScore(5);
-employee2.AddScore(3);
-employee2.AddScore(5);
-employee2.AddScore(6);
-employee2.AddScore(7);
-
-employee3.AddScore(8);
-employee3.AddScore(2);
-employee3.AddScore(5);
-employee3.AddScore(3);
-employee3.AddScore(9);
-
-List<Employee> Employees = new List<Employee>()
-        {
-        employee1, employee2, employee3
-        };
-
-int maxResult = -1;
-Employee employeeWithMaxResult = null;
-
-foreach (var employee in Employees)
+void SetSth(out Statistics statistics)
 {
-    if (employee.Result > maxResult)
-    {
-        maxResult = employee.Result;
-        employeeWithMaxResult = employee;
-    }
+    statistics = new Statistics();
 }
-
-Console.WriteLine("Najwyższy wynik - " + employeeWithMaxResult.Result + " punktów - zdobył " + employeeWithMaxResult.Name + employeeWithMaxResult.Surname + " lat " + employeeWithMaxResult.Age);
