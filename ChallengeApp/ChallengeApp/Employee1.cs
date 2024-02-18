@@ -2,15 +2,15 @@
 
 namespace ChallengeApp
 {
-    public class Employee
+    public class Employee1
     {
         private List<float> grades = new List<float>();
 
-        public Employee()
+        public Employee1()
         {
 
         }
-        public Employee(string name, string surname)
+        public Employee1(string name, string surname)
         {
             this.Name = name;
             this.Surname = surname;
@@ -31,7 +31,7 @@ namespace ChallengeApp
                 Console.WriteLine("invalid grade value");
             }
         }
-        
+
         public void AddGrade(double grade)
         {
             var doubleAsFloat = (float)grade;
@@ -60,7 +60,7 @@ namespace ChallengeApp
                 }
             }
             statistics.Average /= this.grades.Count;
-            
+
             switch (statistics.Average)
             {
                 case var average when average >= 80:
@@ -84,7 +84,7 @@ namespace ChallengeApp
 
         public void AddGrade(char grade)
         {
-            switch(grade)
+            switch (grade)
             {
                 case 'A':
                 case 'a':
@@ -112,24 +112,21 @@ namespace ChallengeApp
                     break;
             }
         }
+
         public void AddGrade(string grade)
         {
             if (float.TryParse(grade, out float result))
             {
-                this.AddGrade(result);  
+                this.AddGrade(result);
             }
             else if (char.TryParse(grade, out char resultChar))
             {
                 this.AddGrade(resultChar);
             }
-            else 
+            else
             {
                 Console.WriteLine("float is not a value");
             }
         }
     }
 }
-
-
-
-

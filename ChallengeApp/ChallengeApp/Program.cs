@@ -5,24 +5,21 @@ Console.WriteLine("===============================================");
 Console.WriteLine("Aby zobaczyć wyniki wprowadź q");
 Console.WriteLine();
 
-
-var employee = new Employee();
+var employee = new Employee1();
 
 while (true)
 {
     Console.WriteLine("Podaj kolejną ocenę pracownika: ");
     var input = Console.ReadLine();
-    if(input == "q")
+    if (input == "q")
     {
         break;
     }
     employee.AddGrade(input);
 }
 
-
-
 var statistics = employee.GetStatistics();
 Console.WriteLine($"Average: {statistics.Average}");
 Console.WriteLine($"Min: {statistics.Min}");
 Console.WriteLine($"Max: {statistics.Max}");
-Console.WriteLine($"Grade letter: {statistics.AverageLetter}"); 
+Console.WriteLine($"Grade letter: {statistics.AverageLetter}");
