@@ -5,7 +5,7 @@
         [Test]
         public void WhenGettingScoreStatisticsAppShouldReturnCorectResult()
         {
-            var employee = new Employee1("Adam", "Maeve");
+            var employee = new Employee("Adam", "Maeve");
             employee.AddGrade("A");
             employee.AddGrade(2.0f);
             employee.AddGrade(6);
