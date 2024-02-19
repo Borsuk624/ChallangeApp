@@ -108,7 +108,7 @@ namespace ChallengeApp
                     break;
                 default:
                     this.grades.Add(0);
-                    Console.WriteLine("Wrong letter");
+                    Console.WriteLine("Wrong  letter");
                     break;
             }
         }

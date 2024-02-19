@@ -1,7 +1,7 @@
 ﻿using ChallengeApp;
 
 Console.WriteLine("Witamy w naszym programie do oceny pracowników");
-Console.WriteLine("==============================================");
+Console.WriteLine("=============================================");
 Console.WriteLine("Aby zobaczyć wyniki wprowadź q");
 Console.WriteLine();
 

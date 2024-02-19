@@ -3,7 +3,7 @@
     public class EmployeeTest
     {
         [Test]
-        public void WhenGettingScoreStatisticsAppShouldReturnCorectResult()
+        public void WhenGettingScoreStatisticsAppShouldReturnCorectResults()
         {
             var employee = new Employee("Adam", "Maeve");
             employee.AddGrade("B");
