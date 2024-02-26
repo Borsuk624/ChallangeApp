@@ -28,7 +28,7 @@ namespace ChallengeApp
             }
             else
             {
-                Console.WriteLine("invalid grade value");
+                throw new Exception("invalid grade value");
             }
         }
 
@@ -47,7 +47,7 @@ namespace ChallengeApp
         {
             var statistics = new Statistics();
             statistics.Average = 0;
-            statistics.Max = float.MinValue;
+            statistics.Max = float.MinValue;    
             statistics.Min = float.MaxValue;
 
             foreach (var grade in this.grades)
@@ -108,8 +108,7 @@ namespace ChallengeApp
                     break;
                 default:
                     this.grades.Add(0);
-                    Console.WriteLine("Wrong  letter");
-                    break;
+                    throw new Exception("wrong letter");
             }
         }
 
@@ -125,7 +124,7 @@ namespace ChallengeApp
             }
             else
             {
-                Console.WriteLine("float is not a value");
+                throw new Exception("string is not float");
             }
         }
     }
