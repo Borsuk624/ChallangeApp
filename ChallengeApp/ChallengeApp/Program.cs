@@ -5,7 +5,7 @@ Console.WriteLine("==============================================");
 Console.WriteLine("Aby zobaczyć wyniki wprowadź q");
 Console.WriteLine();
 
-var employee = new Employee();
+var employee = new Employee("adam", "sandler", "K");
 
 while (true)
 {

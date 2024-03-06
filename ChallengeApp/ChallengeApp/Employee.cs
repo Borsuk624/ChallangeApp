@@ -1,26 +1,13 @@
-﻿using System.Linq;
+﻿namespace ChallengeApp;
 
-namespace ChallengeApp;
-
-public class Employee
+public class Employee : Person
 {
     private List<float> grades = new List<float>();
 
-    public Employee()
-    {
+    public Employee(string name, string surname, string sex)
+        : base(name, surname, sex) { }
 
-    }
-    public Employee(string name, string surname)
-    {
-        this.Name = name;
-        this.Surname = surname;
-    }
-
-    public string Name { get; private set; }
-
-    public string Surname { get; private set; }
-
-    public void AddGrade(float grade)
+      public void AddGrade(float grade)
     {
         if (grade >= 0 && grade <= 100)
         {
@@ -28,7 +15,7 @@ public class Employee
         }
         else
         {
-            throw new Exception("invalid grade value");
+            throw new Exception("Podaj wartość z zakresu 0-100");
         }
     }
 
@@ -47,7 +34,7 @@ public class Employee
     {
         var statistics = new Statistics();
         statistics.Average = 0;
-        statistics.Max = float.MinValue;    
+        statistics.Max = float.MinValue;
         statistics.Min = float.MaxValue;
 
         foreach (var grade in this.grades)
@@ -108,7 +95,7 @@ public class Employee
                 break;
             default:
                 this.AddGrade(0);
-                throw new Exception("wrong letter");
+                throw new Exception("Zła litera - podaj literę z zakresu od 'A' do 'E'");
         }
     }
 
@@ -124,7 +111,7 @@ public class Employee
         }
         else
         {
-            throw new Exception("string is not float");
+            throw new Exception("Błędny znak. Podaj litere z zakresu 'A' do 'E' lub liczbę z zakresu 0-100");
         }
     }
 }
