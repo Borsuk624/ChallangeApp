@@ -5,7 +5,7 @@
         public Person(string name, string surname, string sex)
         {
             this.Name = name;
-            this.Surname = surname; 
+            this.Surname = surname;
             this.Sex = sex;
         }
         public string Name { get; private set; }
